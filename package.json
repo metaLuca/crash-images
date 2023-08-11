@@ -1,0 +1,23 @@
+{
+  "name": "crash-images",
+  "version": "1.0.0",
+  "description": "simple express app to expose static crash images",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/metaLuca/crash-images.git"
+  },
+  "author": "luca marcato",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/metaLuca/crash-images/issues"
+  },
+  "homepage": "https://github.com/metaLuca/crash-images#readme",
+  "dependencies": {
+    "express": "^4.18.2"
+  }
+}
