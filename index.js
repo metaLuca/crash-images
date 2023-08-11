@@ -43,8 +43,13 @@ const imagesName = [
     'frame-40.jpg'
 ];
 
+const getImagesPath = withUrl => withUrl
+    ? imagesName.map(image => `${BASE_URL}/${image}`)
+    : imagesName;
+
 app.get('/images', (req, res) => {
-    res.json(imagesName)
+    const withUrl = res.query.withUrl;
+    res.json(getImagesPath(withUrl))
 })
 
 app.listen(port, () => {
