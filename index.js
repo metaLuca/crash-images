@@ -1,6 +1,7 @@
 const express = require('express')
 const app = express()
 const port = 3000
+const BASE_URL = `http://localhost:${port}`
 
 app.use(express.static('images'))
 
@@ -41,7 +42,7 @@ app.get('/images', (req, res) => {
         'frame-38.png',
         'frame-39.png',
         'frame-40.png'
-    ])
+    ].map((image) => `${BASE_URL}/${image}`))
 })
 
 app.listen(port, () => {
